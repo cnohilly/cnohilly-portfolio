@@ -227,6 +227,11 @@ main > section > div {
 /* Alternative Devices and Screen Sizes Styling Start */
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+
+    main {
+        margin: 10px 0;
+    }
+
     header {
         padding-bottom: 0;
         justify-content: center;
@@ -253,8 +258,8 @@ main > section > div {
     }
 
     main section {
-        margin: 0 25px 25px 25px;
-        padding: 0 25px 30px 25px;
+        margin: 0 10px 25px 10px;
+        padding: 0 10px 25px 10px;
     }
 
     main section h2 {
@@ -265,7 +270,7 @@ main > section > div {
     }
 
     main section div {
-        padding: 0 20px;
+        padding: 0;
     }
 
     .card, .card:first-of-type {

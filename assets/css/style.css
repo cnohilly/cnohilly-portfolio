@@ -1,14 +1,10 @@
 :root {
     --page-background-color: #1e1e1e;
-    --primary-color: #fce138;
-    --secondary-color: #242729;
-    --tertiary-color: #39a6b2;
-
     --nav-hover-color: #2d2d2d;
     --heading-color: #b5a896;
     --bracket-color: #d7ab37;
     --text-color: #aad5f2;
-    --card-outline-color: #707070;
+    --card-outline-color: #888a8c;
 }
 
 * {
@@ -39,7 +35,7 @@ header {
     padding: 20px 35px;
     background-color: var(--page-background-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     position: -webkit-sticky;
@@ -62,11 +58,10 @@ header h1 a {
 }
 
 header a {
-    text-decoration: none;
     color: var(--text-color);
 }
 
-header nav {
+header nav, .contact-menu {
     margin: 7px 30px;
     display: flex;
     flex-wrap: wrap;
@@ -74,13 +69,15 @@ header nav {
     align-items: center;
 }
 
-header nav a {
+header nav a, .contact-menu a {
     padding: 10px 15px;
     font-size: 1.55vw;
+    flex: 1 1 auto;
+    text-align: center;
 }
 
 header nav a:hover {
-    background-color: var(--nav-hover-color);
+    background-color: var(--card-outline-color);
 }
 
 
@@ -95,16 +92,18 @@ header nav a:hover {
     width: 100%;
     height: 200px;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .hero h2 {
     font-size: 30px;
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    background: var(--nav-hover-color);
+    background: var(--card-outline-color);
     color: var(--text-color);
     padding: 15px;
+    margin: 15px;
 }
 
 /* Hero Styling End */
@@ -112,9 +111,8 @@ header nav a:hover {
 /* Main Styling Start */
 
 main {
-    margin-top: 10px;
+    margin: 10px 25px;
 }
-
 
 main section {
     display: flex;
@@ -174,8 +172,8 @@ main > section > div {
     padding: 5px;
     left: 0;
     bottom: 20px;
-    z-index: 1;
     background: var(--card-outline-color);
+    text-shadow: 2px 1px black;
 }
 
 .card-title h3 {
@@ -192,6 +190,16 @@ main > section > div {
 }
 
 /* Work Styling End */
+
+/* Contact Styling Start */
+
+/* .contact-menu {
+    display: flex;
+    flex-wrap: wrap;
+
+} */
+
+/* Contact Styling End */
 
 /* Alternative Devices and Screen Sizes Styling Start */
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -213,8 +221,16 @@ main > section > div {
         justify-content: center;
     }
 
-    header nav a {
+    header nav a, .contact-menu a {
         font-size: 20px;
+    }
+
+    .hero {
+        justify-content: center;
+    }
+
+    main section {
+        margin: 0 25px 25px 25px;
     }
 
     main section h2 {
@@ -224,21 +240,31 @@ main > section > div {
         border-bottom: 5px solid var(--bracket-color);
     }
 
+    main section div {
+        padding: 0;
+    }
+
     .card, .card:first-of-type {
         height: 150px;
         flex: 1 100%;
+    }
+
+    .contact-menu a {
+        flex: 1 100%;
+        text-align: left;
     }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-    .hero {
-        height: 100px;
-    }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+
+    header nav a {
+        flex: 50%;
+    }
 
 }
 

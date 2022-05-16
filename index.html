@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <!-- main header and navigation -->
     <header>
         <h1>
+            <div class="overlay"></div>
             <a href="./">
                 Christopher Nohilly
             </a>
@@ -20,15 +22,19 @@
               <a href="#about">About Me</a>  
               <a href="#work">Work</a>
               <a href="#contact">Contact Me</a>
-              <a href="#">Resume</a>
+              <a href="#">Resume</a> <!-- Will link to resume in the future -->
               
         </nav>
     </header>
+    <!-- hero banner with subtitle -->
     <section class="hero">
         <h2>Hello, world!</h2>
     </section>
-    <main class="main-wrapper">
+    <!-- main page content-->
+    <main>
+        <!-- about me section -->
         <section id="about">
+            <!-- overlay for light background -->
             <div class="overlay"></div>
             <h2>About Me</h2>
             <div class="flex-container">
@@ -48,40 +54,64 @@
                 </p>
             </div>
         </section>
+        <!-- work section with links to projects -->
         <section id="work">
             <div class="overlay"></div>
             <h2>Work</h2>
             <div class="flex-container">
-                <a href="#" class="card">
-                    <img src="./assets/images/matrix.jpg" alt="">
-                    <div class="card-title">
-                        <h3>Surf Report</h3>
-                        <h4>MERN Stack</h4>
-                    </div>
-                </a>
-                <a href="#" class="card">
-                    <img src="./assets/images/run-buddy.jpg" alt="">
+                <a class="card"
+                href="https://cnohilly.github.io/run-buddy/" 
+                target="_blank" rel="noreferrer noopener">
+                    <img src="./assets/images/run-buddy.jpg" 
+                    alt="screenshot of the Run Buddy website">
                     <div class="card-title">
                         <h3>Run Buddy</h3>
                         <h4>HTML/CSS</h4>
                     </div>
                 </a>
-                <a href="#" class="card">
-                    <img src="./assets/images/calculator.jpg" alt="">
+                <a href="#" class="card"> <!-- Placeholder for future work -->
+                    <img src="./assets/images/matrix.jpg" 
+                    alt="stream of random green numbers and letters">
+                    <div class="card-title">
+                        <h3>Surf Report</h3>
+                        <h4>MERN Stack</h4>
+                    </div>
+                </a>
+                <a href="#" class="card"> <!-- Placeholder for future work -->
+                    <img src="./assets/images/calculator.jpg" 
+                    alt="stock image of a calculator">
                     <div class="card-title">
                         <h3>Calculator</h3>
                         <h4>React/JavaScript/CSS</h4>
                     </div>
                 </a>
+                <a href="#" class="card"> <!-- Placeholder for future work -->
+                    <img src="./assets/images/led-wall.jpg" 
+                    alt="wall of l.e.d. lights">
+                    <div class="card-title">
+                        <h3>LED Wall</h3>
+                        <h4>Node/IoT</h4>
+                    </div>
+                </a>
+                <a href="#" class="card"> <!-- Placeholder for future work -->
+                    <img src="./assets/images/puzzle.jpg" 
+                    alt="puzzle with one piece left">
+                    <div class="card-title">
+                        <h3>Pastel Puzzels</h3>
+                        <h4>MERN Stack</h4>
+                    </div>
+                </a>
             </div>
         </section>
+        <!-- contact section with several means of contact or personal accounts -->
         <section id="contact">
             <div class="overlay"></div>
             <h2>Contact Me</h2>
             <address class="contact-menu">
-                <a href="#">555-555-5555</a> <!-- tel:+15555555555 -->
-                <a href="#">Email</a> <!-- mailto: -->
+                <a href="#">555-555-5555</a> <!-- tel:+15555555555 / leaving link as # for now-->
+                <a href="mailto:ctnohilly@gmail.com">ctnohilly@gmail.com</a>
                 <a href="https://github.com/cnohilly" target="_blank" rel="noreferrer noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/chris-nohilly-291661215/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
             </address>
         </section>
     </main>

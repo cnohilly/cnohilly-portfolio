@@ -43,6 +43,14 @@ a {
 
 /* Overlay Styles End */
 
+/* Flex Container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+
 /* Header Styling Start */
 
 header {
@@ -55,16 +63,14 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-position: 80%;
     z-index: 9999;
     box-shadow: 0px 0px 10px black;
 }
 
 header h1 {
-    font-weight: bold;
     font-size: 36px;
-    color: var(--heading-color);
-    margin: 0;
+    position: relative;
+    padding: 8px 15px;
 }
 
 header h1 a {
@@ -75,7 +81,7 @@ header nav, .contact-menu {
     margin: 7px 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -83,15 +89,9 @@ header nav, .contact-menu {
 header nav a, .contact-menu a {
     padding: 10px 15px;
     font-size: 1.55vw;
-    flex: 1 1 auto;
-    text-align: center;
     margin: 5px;
     border-bottom: 5px solid var(--card-outline-color);
     border-radius: 10px 10px 0 0;
-}
-
-header nav a {
-
 }
 
 header nav a:hover, .contact-menu a:hover {
@@ -107,12 +107,8 @@ header nav a:hover, .contact-menu a:hover {
 .hero {
     background-image: url("../images/helloworld.jpg");
     background-size: cover;
-    background-position: left;
-    width: 100%;
     height: 200px;
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -157,17 +153,9 @@ main > section > div {
 
 /* Main Styling End */
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-}
-
 /* Work Styling Start */
 
 .card {
-    display: flex;
-    align-items: center;
     position: relative;
     flex: 1 45%;
     height: 150px;
@@ -175,17 +163,20 @@ main > section > div {
     margin: 10px;
     border: 5px solid var(--card-outline-color);
 }
+/* Target first card to make it bigger and give its own line */
 .card:first-of-type {
     flex: 1 100%;
     height: 300px;
 }
 
 .card img {
-    position: absolute;
     filter: brightness(0.4);
-    top: 0;
     width: 100%;
     transition: filter 1s;
+}
+/* Transition used to give gradual highlight effect */
+.card:hover img {
+    filter: brightness(1);
 }
 
 .card-title {
@@ -207,10 +198,6 @@ main > section > div {
     font-style: italic;
 }
 
-.card:hover img {
-    filter: brightness(1);
-}
-
 /* Work Styling End */
 
 /* Contact Styling Start */
@@ -219,34 +206,15 @@ main > section > div {
     flex: auto;
 }
 
-
-
-
 /* Contact Styling End */
 
 /* Alternative Devices and Screen Sizes Styling Start */
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
-
-    main {
-        margin: 10px 0;
-    }
-
     header {
-        padding-bottom: 0;
         justify-content: center;
         position: relative;
-    }
-
-    header h1 {
-        width: 100%;
-        text-align: center;
-    }
-
-    header nav {
-        margin-top: 20px;
-        width: 100%;
-        justify-content: center;
+        padding: 10px 0 0 0;
     }
 
     header nav a, .contact-menu a {
@@ -255,6 +223,10 @@ main > section > div {
 
     .hero {
         justify-content: center;
+    }
+    
+    main {
+        margin: 10px 0;
     }
 
     main section {
@@ -265,6 +237,7 @@ main > section > div {
     main section h2 {
         text-align: center;
         width: 100%;
+        padding: 0;
         border: none;
         border-bottom: 5px solid var(--bracket-color);
     }
@@ -281,24 +254,21 @@ main > section > div {
     .contact-menu {
         flex-direction: column;
         align-items: flex-start;
-        flex-wrap: nowrap;
     }
-
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+    header nav {
+        margin: 20px 5px 5px 5px;
+    }
 
     header nav a {
-        flex: 50%;
+        font-size: 12px;
     }
 }
 

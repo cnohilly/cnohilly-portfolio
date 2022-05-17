@@ -1,12 +1,9 @@
 :root {
-    --nav-hover-color: #2d2d2d;
-
     --dark-primary-color: #121212;
-    --secondary-color: #f2c7aa;
+    --primary-color: #aad5f2;
+    --secondary-color: #b5a896;
+    --tertiary-color: #888a8c;
     --bracket-color: #d7ab37;
-    --heading-color: #b5a896;
-    --text-color: #aad5f2;
-    --card-outline-color: #888a8c;
 }
 
 * {
@@ -18,19 +15,18 @@
 body {
     background-color: var(--dark-primary-color);
     font-family: Consolas, 'Courier New', monospace;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 a {
     text-decoration: none;
     font-style: normal;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
-/* Overlay Style Start */
-
+/* background overlay */
 .overlay {
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     opacity: 12%;
     width: 100%;
     height: 100%;
@@ -40,8 +36,6 @@ a {
     border-radius: 35px;
     z-index: -1;
 }
-
-/* Overlay Styles End */
 
 /* Flex Container */
 .flex-container {
@@ -67,6 +61,7 @@ header {
     box-shadow: 0px 0px 10px black;
 }
 
+/* flex container for personal image and name header */
 header div {
     align-items: center;
     justify-content: center;
@@ -86,10 +81,11 @@ header h1 {
     font-size: 36px;
     position: relative;
     padding: 8px 15px;
+    text-align: center;
 }
 
 header h1 a {
-    color: var(--heading-color);
+    color: var(--secondary-color);
 }
 
 header nav, .contact-menu {
@@ -105,15 +101,14 @@ header nav a, .contact-menu a {
     padding: 10px 15px;
     font-size: 1.55vw;
     margin: 5px;
-    border-bottom: 5px solid var(--card-outline-color);
+    border-bottom: 5px solid var(--tertiary-color);
     border-radius: 10px 10px 0 0;
 }
 
 header nav a:hover, .contact-menu a:hover {
-    background-color: var(--card-outline-color);
+    background-color: var(--tertiary-color);
     color: black;
 }
-
 
 /* Header Styling End */
 
@@ -130,7 +125,7 @@ header nav a:hover, .contact-menu a:hover {
 
 .hero h2 {
     font-size: 30px;
-    background: var(--card-outline-color);
+    background: var(--tertiary-color);
     padding: 15px;
     margin: 15px;
     color: black;
@@ -153,7 +148,7 @@ main section {
 }
 
 main section h2 {
-    color: var(--heading-color);
+    color: var(--secondary-color);
     font-size: 48px;
     margin: 25px 0px;
     width: 25%;
@@ -176,7 +171,7 @@ main > section > div {
     height: 150px;
     overflow: hidden;
     margin: 10px;
-    border: 5px solid var(--card-outline-color);
+    border: 5px solid var(--tertiary-color);
 }
 /* Target first card to make it bigger and give its own line */
 .card:first-of-type {
@@ -199,7 +194,7 @@ main > section > div {
     padding: 8px;
     left: 0;
     bottom: 20px;
-    background: var(--card-outline-color);
+    background: var(--tertiary-color);
     color: black;
     border-radius: 0 15px 15px 0;
 }
@@ -278,12 +273,17 @@ main > section > div {
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
     header nav {
         margin: 20px 5px 5px 5px;
     }
 
     header nav a {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 

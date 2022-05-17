@@ -1,14 +1,8 @@
 # 02 Advanced CSS: Portfolio
 
-Welcome to this week's Challenge! This is an even-numbered week, so you won't be given any starter code. Instead, you'll create a web application from scratch! This week, you'll build a portfolio page, which you can add to as the course progresses. 
+## Description
 
-A portfolio of work can showcase your skills and talents to employers looking to fill a part-time or full-time position. An effective portfolio highlights your strongest work as well as the thought processes behind it. Students who have portfolios with deployed web applications (meaning they are live on the web) are typically very successful in their career search after the boot camp. This last point can’t be stressed enough: at many companies, having several deployed projects is a minimum requirement to receive an initial interview. 
-
-With these points in mind, in this Challenge you’ll set yourself up for future success by applying the core skills you've recently learned: flexbox, media queries, and CSS variables. You'll get to practice your new skills while creating something that you'll use during your job search. It’s a win-win that you'll likely be grateful for in the future!
-
-**Note**: If you don't have enough web applications to showcase at this point, use placeholder images and names. You can change them to real applications as you create them later in the course.
-
-Let’s look at what a user story written from the perspective of a hiring manager might look like. As you might remember, we follow the AS AN / I WANT / SO THAT format.
+In this project, I was tasked with creating a portfolio page with a set of acceptance criteria and an example of the general look and functionality to follow. This was built from scratch with only a gif showing the example site. This was made using HTML and CSS only. The primary challenge of this assignment was solving how to achieve the desired functionality and in which way to do so. We were meant to use Flexbox as one of our primary methods of designing this page and many of the elements to be included should be responsive and flexible to fit a variety of screen sizes.
 
 ## User Story
 
@@ -36,17 +30,14 @@ WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ```
 
-The following animation shows the web application's appearance and functionality:
+The following animation is the example showing the web application's desired appearance and functionality:
 
 ![portfolio demo](./assets/02-advanced-css-homework-demo.gif)
 
-## Review
+## Product
 
-You are required to submit BOTH of the following for review:
+This is a link to the deployed webpage: [Christopher Nohilly - Porfolio](https://cnohilly.github.io/cnohilly-portfolio/)
 
-* The URL of the deployed application.
+The following image is a screenshot of the deployed application: 
 
-* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+![Deployed Webpage](./assets/images/deployed-website.jpg)
